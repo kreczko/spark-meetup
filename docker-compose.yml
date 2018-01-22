@@ -12,7 +12,7 @@ services:
       - INIT_DAEMON_STEP=setup_spark
       - "constraint:node==<yourmasternode>"
     volumes:
-      - .:/code
+      - $PWD:$PWD
   spark-worker-1:
     image: bde2020/spark-worker:2.2.0-hadoop2.7
     container_name: spark-worker-1
@@ -24,7 +24,7 @@ services:
       - "SPARK_MASTER=spark://spark-master:7077"
       - "constraint:node==<yourmasternode>"
     volumes:
-      - .:/code
+      - $PWD:$PWD
   spark-worker-2:
     image: bde2020/spark-worker:2.2.0-hadoop2.7
     container_name: spark-worker-2
@@ -36,4 +36,4 @@ services:
       - "SPARK_MASTER=spark://spark-master:7077"
       - "constraint:node==<yourworkernode>"
     volumes:
-      - .:/code
+      - $PWD:$PWD
