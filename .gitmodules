@@ -1,0 +1,3 @@
+[submodule "spark-py-notebooks"]
+	path = spark-py-notebooks
+	url = https://github.com/jadianes/spark-py-notebooks.git
